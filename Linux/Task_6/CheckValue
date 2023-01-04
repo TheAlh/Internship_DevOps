@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read var
+if [ ${#var} -le 1 ]
+then
+case "$var" in
+	[A-Z]	) echo "upper case letter";;
+	[a-z] ) echo "lower case letter";;
+	[0-9] ) echo "it's number";;
+	*	) echo "punctuation, space, or smt else";;
+esac
+else
+	echo need one character
+fi
